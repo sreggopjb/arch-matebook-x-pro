@@ -479,8 +479,8 @@ Section "InputClass"
         Driver "synaptics"
         MatchIsTouchpad "on"
         # Enabling tap-to-click is a perilous choice that begets needing to set up palm detection/ignoring. Since I am fine clicking my touchpad, I sidestep the issue by disabling tapping. 
-        Option "TapButton1" "0"
-        Option "TapButton2" "0"
+        Option "TapButton1" "1"
+        Option "TapButton2" "1"
         Option "TapButton3" "0"
 	# Using negative values for ScrollDelta implements natural scroll, a la Macbook default. 
         Option "VertScrollDelta" "-80"
