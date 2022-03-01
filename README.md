@@ -478,8 +478,10 @@ Section "InputClass"
         Identifier "touchpad catchall"
         Driver "synaptics"
         MatchIsTouchpad "on"
-        # Enabling tap-to-click is a perilous choice that begets needing to set up palm detection/ignoring. Since I am fine clicking my touchpad, I sidestep the issue by disabling tapping. 
+        # Enabling tap-to-click is a perilous choice that begets needing to set up palm detection/ignoring. Since I am fine clicking my touchpad, I sidestep the issue by disabling tapping. Sreggopjb note: I prefer tap and I'll put up with it until I get palm detection working. 
+	#Might change to libinput at some point.
         Option "TapButton1" "1"
+	# TapButton2 doesn't seem to do anything. Two finger clicking seems to work though.
         Option "TapButton2" "1"
         Option "TapButton3" "0"
 	# Using negative values for ScrollDelta implements natural scroll, a la Macbook default. 
