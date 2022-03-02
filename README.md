@@ -473,23 +473,23 @@ Here is how I configured it.
 ```
 
 Then I created `/etc/X11/xorg.conf.d/30-synaptics.conf` with these contents:
+# Changed this to `/etc/X11/xorg.conf.d/70-synaptics.conf`
 ```
 Section "InputClass"
-        Identifier "touchpad catchall"
+	Identifier "touchpad catchall"
         Driver "synaptics"
         MatchIsTouchpad "on"
-        # Enabling tap-to-click is a perilous choice that begets needing to set up palm detection/ignoring. Since I am fine clicking my touchpad, I sidestep the issue by disabling tapping. Sreggopjb note: I prefer tap and I'll put up with it until I get palm detection working. 
-	#Might change to libinput at some point.
-        Option "TapButton1" "1"
-	# TapButton2 doesn't seem to do anything. Two finger clicking seems to work though.
-        Option "TapButton2" "1"
-        Option "TapButton3" "0"
+       	Option "TapButton1" "1"
+	Option "TapButton2" "3"
+	Option "TapButton3" "2"
+	Option "HorizTwoFingerScroll" "on"
+	Option "PalmDetect" "1"
 	# Using negative values for ScrollDelta implements natural scroll, a la Macbook default. 
         Option "VertScrollDelta" "-80"
-	Option "HorizScrollDelta" "-80"
-        # https://wiki.archlinux.org/index.php/Touchpad_Synaptics has a very buried note about this option
-	# tl;dr this defines right button to be rightmost 7% and bottommost 5%
-	Option "SoftButtonAreas" "93% 0 95% 0 0 0 0 0"  
+      	Option "HorizScrollDelta" "-50"
+        # This is a much nicer right click setting than what the original repo had.
+	# Now, there is about a 1 inch space to click in the bottom right corner.
+	Option "SoftButtonAreas" "85% 0 87% 0 0 0 0 0"  
         MatchDevicePath "/dev/input/event*"
 EndSection
 ```
