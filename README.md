@@ -473,7 +473,7 @@ Here is how I configured it.
 ```
 
 Then I created `/etc/X11/xorg.conf.d/30-synaptics.conf` with these contents:
-# Changed this to `/etc/X11/xorg.conf.d/70-synaptics.conf`
+(Changed this to `/etc/X11/xorg.conf.d/70-synaptics.conf`)
 ```
 Section "InputClass"
 	Identifier "touchpad catchall"
