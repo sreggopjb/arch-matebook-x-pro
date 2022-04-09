@@ -229,10 +229,10 @@ we add to our boot loader config.
 `# pacman -S intel-ucode`
 
 Next setup rEFInd, it's themable and looks much nicer than grub or 
-systemd-boot
+systemd-boot. We'll also add the required lvm2 package.
 
 ```
-# pacman -S refind-efi parted sbsigntools imagemagick
+# pacman -S refind parted sbsigntools imagemagick lvm2
 # refind-install
 ```
 
