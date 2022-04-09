@@ -284,7 +284,7 @@ Regnerate initramfs
 
 Install some packages so `wifi-menu` works after reboot.
 
-`# pacman -S dialog wpa_supplicant`
+`# pacman -S netctl dialog wpa_supplicant dhcpcd ppp`
 
 Set the root password
 
