@@ -189,7 +189,7 @@ Mount the boot/ESP volume
 
 Install the base system
 
-`# pacstrap /mnt base base-devel`
+`# pacstrap /mnt base base-devel linux linux-firmware`
 
 Generate the fstab
 
