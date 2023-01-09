@@ -322,14 +322,9 @@ Then log out and switch to that user.
 
 ## Setup power saving
 
-Enable TLP for powersaving
+Install power-profiles-daemon for power profiles in GNOME
 ```
-# pacman -S tlp tlp-rdw
-# systemctl enable tlp.service
-# systemctl enable tlp-sleep.service
-# systemctl mask systemd-rfkill.service
-# systemctl mask systemd-rfkill.socket
-# systemctl enable NetworkManager-dispatcher.service
+# pacman -S power-profiles-daemon
 ```
 
 Install ethtool, lsb-release and smartmontools at the suggestion of tlp-stat
